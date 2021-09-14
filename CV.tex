@@ -1,0 +1,352 @@
+\documentclass[A4,11pt]{article}
+%\documentclass[letterpaper,11pt]{article} %For use in US
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage{tikz}
+\input{glyphtounicode}
+
+\begin{comment}
+I am by no means a professional when it comes to the CV's/resumes. This is just the template of the CV I designed for myself. 
+\end{comment}
+
+
+%-----FONT OPTIONS-------------------------------------------------------------
+\begin{comment}
+The font of the document will impact not just how readable it is, but how it is
+perceived. I have chosen to use Palatino for its legibility, some others are given below. There is far too much about typography to discus here. Note: serif fonts have short projecting strokes, sans-serif fonts are sans (without) these strokes.
+\end{comment}
+
+ \usepackage{palatino}
+
+%-----PAGE SETUP---------------------------------------------------------------
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-1cm}
+\addtolength{\evensidemargin}{-1cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-1cm}
+\addtolength{\textheight}{2cm}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0cm}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that .pdf is machine readable
+\pdfgentounicode=1
+
+%-----CUSTOM COMMANDS FOR FORMATTING SECTIONS----------------------------------
+\newcommand{\CVItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\CVSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \text{\small#1} & \text{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubItem}[1]{\CVItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\CVSubHeadingListStart}{\begin{itemize}[leftmargin=0.5cm, label={}]}
+\newcommand{\CVSubHeadingListEnd}{\end{itemize}}
+\newcommand{\CVItemListStart}{\begin{itemize}}
+\newcommand{\CVItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%------------------------------------------------------------------------------
+% Design Starts from here.  %
+%------------------------------------------------------------------------------
+\begin{document}
+
+%-----HEADING------------------------------------------------------------------
+\begin{comment}
+It is always a best practice to add your image in Cvs/Resumes. 
+\end{comment}
+
+\begin{minipage}[c]{0.5\textwidth}
+    \vspace{2pt}
+    \textbf{\Huge \scshape{Parvati Jayakumar}} \\\vspace{1pt}% \scshape sets small to capital letters, remove if desired
+    
+    \faicon{phone} \href{+91 123456789}{\underline{+91 123456789}}  %Enter your phone no. 
+    \hspace{10pt}
+    \faicon{envelope} \href{mailto:yourEmail@provider.com} {\underline{yourEmail@provider.com}} \\ % Enter your email address
+    \faicon{linkedin} \href{https://www.linkedin.com/in/sample/} {\underline{linkedin.com/sample}} \\ % Enter your LinkedIn address
+    \faicon{github} \href{https://github.com/sample} {\underline{github.com/sample}} \\ % Enter your GitHub address
+    \faicon{medium} \href{https://sample.medium.com/} {\underline{medium.com/sample}} \\ % Enter your Medium address
+\end{minipage}
+\hspace{150pt} 
+\begin{minipage}[c]{0.2\textwidth}
+\begin{tikzpicture}
+    \clip (0,0) circle (1.75cm);
+    \node at (0,-.7) {\includegraphics[width = 6cm]{portrait.jpg}}; 
+    % if necessary the picture may be moved by changing the at (coordinates)
+    % width defines the 'zoom' of the picture
+\end{tikzpicture}
+\end{minipage}
+
+%-----OBJECTIVE----------------------------------------------------------------
+\section{OBJECTIVE}
+To work in a challenging and dynamic environment and to keep adding values to the organization that I represent and serve, while also concurrently upgrading my skills and knowledge.
+
+%-----EDUCATION----------------------------------------------------------------
+\section{Education}
+  \CVSubHeadingListStart
+%    \CVSubheading % Example
+%      {Degree name}{Study period}
+%      {Institution name}{Marks/CGPA}
+    \CVSubheading
+      {{Bachelor of Technology $|$ \emph{\small{Branch: Electronics and Communication}}}}{August 2018 - Current}
+      {Indian Institute of Information Technology Dharwad, Karnataka}{Current CPI: 9.26}
+    \CVSubheading
+      {{AISSCE $|$ \emph{\small{Stream: PCMC}}}}{May 2018}
+      {Bhavans Adarsha Vidyalaya, Kakkanad, Kochi, Kerala}{Percentage: 93.6\%}
+    \CVSubheading
+      {AISSE}{May 2016}
+      {Bhavans Adarsha Vidyalaya, Kakkanad, Kochi, Kerala}{CGPA: 10}
+  \CVSubHeadingListEnd
+
+%-----EXPERIENCE----------------------------------------------------------
+\begin{comment}
+Try to briefly explain what you did and why it is relevant to the position you
+are seeking. 
+\end{comment}
+
+\section{Experience}
+  \CVSubHeadingListStart
+%    \CVSubheading %Example
+%      {What you did}{When you worked there}
+%      {Who you worked for}{Where they are located}
+%      \CVItemListStart
+%        \CVItem{More details}
+%      \CVItemListEnd
+    \CVSubheading
+      {Contributor}{August 2021 - Current}
+      {GirlScript Winter of Contributing}{Remote}
+      \CVItemListStart
+        \CVItem{Contribute to projects on domains: Data science with Python, Machine Learning, C/C++}
+      \CVItemListEnd
+      
+    \CVSubheading
+    {Digital Signal Processing training}{March 2021 - April 2021}
+    {PathPartner Technology Pvt.Ltd}{Remote}
+    \CVItemListStart
+      \CVItem{Topics Included:}
+      \CVItemListStart
+          \CVItem{Image}
+          \CVItem{Audio}
+          \CVItem{Video}
+          \CVItem{DSP Architecture: RISC, CISC, TMS320C6x}
+          \CVItem{Radar signal processing basics}
+      \CVItemListEnd
+    \CVItemListEnd
+    
+    \CVSubheading
+      {Microsoft Azure Machine Learning Scholar}{July 2020 - January 2021}
+      {Udacity}{Remote}
+      \CVItemListStart
+        \CVItem{\textbf{Phase 1} - Got myself introduced with Machine learning and Microsoft Azure, gave 5 webinars and 3 AMAs, participated in a Kaggle competition, published our study group's technical magazine, actively took part in all 3- 24hrs study jam (In fact, hosted Study Jam 2.0 with 8 other amazing people), Successfully did \#50DaysOfUdacity and participated in \#VisualChallenge, \#StudentStory, Attended a session with Aniththa Umamahesan and Abraham (Osarumwense) Omorogbe and worked beside some really great people on many other initiatives.}
+        \CVItem{\textbf{Phase 2} - Worked on 3 mini projects and a final project where my trained and deployed model can now say if you were in RMS Titanic (Kaggle), would you survive or not!}
+        \CVItem{Was one among the 300 recipients who got into phase-2 (From over 36500+ applications).}
+    \CVItemListEnd
+    \CVSubheading
+      {Summer Intern}{May 2019 - July 2019}
+      {Indian Institute of Science}{Bangalore, India}
+      \CVItemListStart
+        \CVItem{Worked under Dr.Suresh Sundaram, Associate professor, AIRL department of Aeronautics engineering on the project: Facial recognition through Facenet model using PyTorch}
+        \CVItem{Also worked on other implementations of Facial recognition.}
+      \CVItemListEnd
+  \CVSubHeadingListEnd
+
+%-----PROJECTS------------------------------------------------------------------
+\begin{comment}
+Briefly explain the projects and research works you did so far. 
+\end{comment}
+
+\section{Projects}
+\CVSubHeadingListStart
+%    \CVSubheading %Example
+%      {What did you do}{When did you work on the project}
+%      \CVItemListStart
+%        \CVItem{More details}
+%      \CVItemListEnd
+
+    \CVSubheading
+      {Automatic Speech Recognition for an Indian Language} {Jan 2021 – May 2021}{Python, Shell}{Remote}
+    \CVItemListStart
+      \CVItem{This project aims to create an Automatic Speech Recognition System (ASR) for Hindi language from the data available for non- commercial research purposes by All India Radio.}
+      \CVItem{Through a single search query, using Selenium, around 1000hrs data was downloaded.}
+      \CVItem{Training was done on Kaldi software. MFCC+CNVM were used for future extraction. Then we trained a GMM-HMM based acoustic model. We also used a mono-phone training model, triphone based delta+ delta-delta Training and decoding. }
+      \CVItem{The WER received was 46.3. }
+      \CVItemListEnd
+      
+    \CVSubheading
+      {Machine Learning with the Titanic dataset on Azure} {January 2021} {Python}{Remote}
+    \CVItemListStart
+      \CVItem{This project was done as a part of Udacity's 'Machine Learning Engineer with Microsoft Azure' nanodegree course.}
+      \CVItem{I had to train, deploy and consume the model endpoint. I have used Azure Machine Learning SDK for Python to build and run machine learning workflows.}
+      \CVItem{Training the dataset is done using 2 methods: Optimize the hyperparameters of a standard Scikit-learn Logistic Regression using HyperDrive, AutoML run.}
+      \CVItem{Best accuracy achieved was 87.15\%.}
+      \CVItemListEnd
+      
+    \CVSubheading
+      {Automatic Number Plate Detection for Indian vehicles} {August 2020 - December 2020} {Python}{Remote}
+    \CVItemListStart
+      \CVItem{We were able to deal with noisy, low illuminated, cross angled, non-standard font number plates.}
+      \CVItem{This work employs several image processing techniques such as, morphological transformation, Gaussian smoothing, Gaussian thresholding and Sobel edge detection method in the pre-processing stage, after-which number plate segmentation, contours are applied by border following and contours are filtered based on character dimensions and spatial localization. }
+      \CVItem{Finally we apply Optical Character Recognition (OCR) to recognize the extracted characters.}
+      \CVItem{The detected texts are stored in the database, further which they are sorted and made available for searching.}
+      \CVItemListEnd
+      
+    \CVSubheading
+      {Facial recognition through Facenet model using PyTorch} {June 2020 - July 2020} {Python}{IISc, Bangalore}
+    \CVItemListStart
+      \CVItem{This FaceNet model uses Inception Resnet (V1) architecture (GoogLeNet) , and is pretrained on VGGFace2 dataset. }
+      \CVItem{Here, I have used MTCNN to detect and align faces. Haarcascade classifier is used to detect faces from webcam, since it is faster. For real time general purposes, the model should work fast enough.}
+      \CVItemListEnd
+      
+    \CVSubheading
+      {Face detection using OpenCV} {May 2020 - June 2020} {Python}{IISc, Bangalore}
+    \CVItemListStart
+      \CVItem{Inbuilt Haarcascade classifier was used to train the data. The Haarcascade classifier uses the AdaBoost algorithm to detect multiple facial organs including the eye, nose, and mouth. }
+      \CVItem{First, it reads the image to be detected and converts it into gray image, then loads Haar cascade classifier to judge whether it contains human face.}
+      \CVItemListEnd
+      
+    \textbf{Currently working on: Stackoverflow Data Analysis,  Driver drowsiness detection etc.}
+     
+  \CVSubHeadingListEnd
+
+%-----COMMUNITY INVOLVEMENT----------------------------------------------------
+\section{Community Involvement}
+  \textbf{Member: IEEE Student Branch, IIIT Dharwad}
+  \CVItemListStart
+      \CVItem{Current role: IEEE Day Campus Ambassedor}
+      \CVItemListStart
+        \CVItem{Organize events in my college from September 20 - October 15 on the occasion of IEEE Day}
+        \CVItem{Be a part of IEEE Bangalore section in organizing events.}
+      \CVItemListEnd
+      \CVItem{Looking forward to participate in IEEEXtreme 15.0}
+      \CVItem{Aiming ahead to participate in workshops, publish papers etc.}
+  \CVItemListEnd
+  \vspace{10pt}
+  \textbf{Member: IIIT Dharwad Sports committee}
+  \CVItemListStart
+      \CVItem{Participated in GUSTO 2020 (Inter IIIT Sports meet)}
+  \CVItemListEnd
+
+%-----SKILLS-------------------------------------------------------------------
+\begin{comment}
+This section is compressed from the various skills sections that CVs generally 
+recommends.
+\end{comment}
+
+\section{Skills}
+ \begin{itemize}[leftmargin=0.5cm, label={}]
+    \small{\item{
+     \textbf{Languages}{: English, Hindi, Malayalam} \\
+     \textbf{Programming}{: C, C++, Python, MATLAB, 8085, Arduino programming}\\
+     \textbf{Document Creation}{: Microsoft Office Suite, LaTex} \\
+     \textbf{Other Technologies}{:Microsoft Azure Machine Learning, AWS}\\
+     \textbf{Interpersonal skills}{:Event management, Time management}
+    }}
+ \end{itemize}
+
+ %-----COURSES UNDERTAKEN-------------------------------------------------------
+\begin{comment}
+Mention all the courses you undertook so far, in this section. 
+\end{comment}
+\section{Courses Undertaken}
+\textbf{August – December 2018}
+  \CVItemListStart
+      \CVItem{Introduction to Programming (CS104)}
+      \CVItem{Digital Design (EC102)}
+      \CVItem{Basic Circuit Theory (EC104)}
+      \CVItem{Professional Communication (HS102)}
+      \CVItem{Mathematics-1 (MA101)} 
+  \CVItemListEnd
+\vspace{5pt}
+  \textbf{January – May 2019}
+  \CVItemListStart
+      \CVItem{Data structures (CS102)}
+      \CVItem{Computer Architecture (EC105)}
+      \CVItem{Environmental Studies (HS101)}
+      \CVItem{Mathematics -2 (MA102)}
+      \CVItem{Physics (PH103)}
+  \CVItemListEnd
+\vspace{5pt}
+  \textbf{August – December 2019}
+  \CVItemListStart
+      \CVItem{Microprocessors \& Microcontrollers (EC202)}
+      \CVItem{Analog Electronics (EC203)}
+      \CVItem{Control Systems (EC205)}
+      \CVItem{Electromagnetic Theory (EC207)}
+      \CVItem{Engineering Economics \& Accounting (HS202)}
+      \CVItem{Probability and Statistics (MA201)}
+  \CVItemListEnd 
+\vspace{5pt}
+  \textbf{January – May 2020}
+  \CVItemListStart
+      \CVItem{Signals and Systems (EC201)}
+      \CVItem{Analog \& Digital Communication (EC204)}
+      \CVItem{Linear Integrated Circuits (EC206)}
+      \CVItem{Professional Ethics (HS201)}
+      \CVItem{Linear Algebra (MA202)}
+      \CVItem{Probability and Random Process (MA203)}
+  \CVItemListEnd 
+\vspace{5pt}
+  \textbf{August – December 2020}
+  \CVItemListStart
+      \CVItem{Introduction to VLSI Design (EC301)}
+      \CVItem{Digital Signal Processing (EC306)}
+      \CVItem{Information Theory and Coding (EC309)}
+      \CVItem{Embedded Systems Design (EC310)}
+      \CVItem{Introduction to Algorithms(EC351)}
+  \CVItemListEnd 
+\vspace{5pt}
+  \textbf{January – May 2021}
+  \CVItemListStart
+      \CVItem{Wireless Communication (EC307)}
+      \CVItem{System Identification (EC352)}
+      \CVItem{Machine Learning for Speech and Computer Vision (EC353)}
+      \CVItem{Internet Of Things (EC355)}
+      \CVItem{System on Chip Design (EC356)}
+  \CVItemListEnd 
+\vspace{5pt}
+  \textbf{August – December 2021}
+  \CVItemListStart
+      \CVItem{DevOps and its Applications (CS457)}
+      \CVItem{Mixed Signal Design (EC453)}
+      \CVItem{Smart Management Systems and its Applications (EC455)}
+      \CVItem{Reinforcement Learning (EC456)}
+      \CVItem{Deep Learning for Speech and Computer Vision (EC457)}
+  \CVItemListEnd
+  
+%------------------------------------------------------------------------------
+\end{document}
